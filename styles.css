@@ -1,0 +1,70 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+  }
+  @font-face{
+      font-family: Happy;
+      src: url(assets/KGHAPPYSolid.ttf);
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    background-image: url(assets/green.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+  }
+  .calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 90px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 90px);
+  }
+  
+  .calculator-grid > button {
+    cursor: pointer;
+    font-size: 1.4rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(220, 216, 238, 0.75);
+    font-family: "Happy";
+    color:rgb(97, 95, 95);
+  }
+  
+  .calculator-grid > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+  }
+  
+  .span-two {
+    grid-column: span 2;
+  }
+  
+  .output {
+    grid-column: 1 / -1;
+    background-color: rgba(70, 109, 80, 0.75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap:initial;
+    word-break: break-all;
+    border:1px rgb(255, 255, 255) solid;
+  }
+  
+  .output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+    font-family: "Happy";
+
+  }
+  
+  .output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+    font-family: "Happy";
+  }
